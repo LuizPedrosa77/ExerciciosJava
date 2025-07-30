@@ -48,12 +48,4 @@ public class Produto {
     public String toString() {
         return "[Produto nome=" + nome + ", id=" + id + ", valor= R$" + valor + "]";
     }
-
-
-
-
-    
-
-
-
 }
