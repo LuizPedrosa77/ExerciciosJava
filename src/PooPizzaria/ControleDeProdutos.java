@@ -14,7 +14,7 @@ public class ControleDeProdutos {
         this.listarProdutos();
         for(int i = 0; i < produtos.size(); i++) {
             if(produtos.get(i).getId() == idProduto) {
-                double valorTotal = produtos.get(i).getId() * quantidadeVenda;
+                double valorTotal = produtos.get(i).getValor() * quantidadeVenda;
                 System.out.println("O valor total do produto é: R$"+ String.format("%.2f", valorTotal));
                 return valorTotal;
             }

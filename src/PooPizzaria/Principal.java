@@ -19,7 +19,7 @@ public class Principal {
         double valorProduto;
         int proximoId = 1;
         int produtoId;
-        
+        int quantidade;
 
         // Repetição do menu
         while (!parar) {
@@ -43,7 +43,12 @@ public class Principal {
 
                 // Venda do produto
                 case 1:
-                    System.out.println("Você escolheu: Vender Produtos (em breve!)");
+                    System.out.println("Digite o id do produto que deseja vender: ");
+                    produtoId = leitor.nextInt();
+                    System.out.println("Digite a quantidade do produto: ");
+                    quantidade = leitor.nextInt();
+                    leitor.nextLine();
+                    double totalVenda = produtos.venderProduto(produtoId, quantidade);
                     break;
 
                 // Listar Produtos
@@ -84,7 +89,7 @@ public class Principal {
             
             }
 
-             } catch (InputMismatchException e) { /
+             } catch (InputMismatchException e) {
                 System.out.println("Entrada inválida! Por favor, digite um número para a opção ou valor.");
                 leitor.nextLine(); 
             } catch (Exception e) { 
